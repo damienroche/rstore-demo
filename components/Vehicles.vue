@@ -1,7 +1,10 @@
 <script lang="ts" setup>
 const store = useStore()
-store.vehicles.queryMany()
+
+// No Console log
 store.vehicleConfigurations.queryMany()
+store.vehicles.queryMany()
+
 </script>
 
 <template>
