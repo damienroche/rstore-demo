@@ -6,8 +6,8 @@ settings:
 
 dependencies:
   '@rstore/nuxt':
-    specifier: ^0.6.1
-    version: 0.6.1(vite@6.2.5)(vue@3.5.13)
+    specifier: ^0.6.2
+    version: 0.6.2(vite@6.2.5)(vue@3.5.13)
   nuxt:
     specifier: ^3.16.2
     version: 3.16.2(vite@6.2.5)
@@ -1162,6 +1162,8 @@ packages:
       '@parcel/watcher-win32-ia32': 2.5.1
       '@parcel/watcher-win32-x64': 2.5.1
     dev: false
+    bundledDependencies:
+      - napi-wasm
 
   /@pkgjs/parseargs@0.11.0:
     resolution: {integrity: sha512-+1VkjdD0QBLPodGrJUeqarH8VAIvQODIbwh9XpP5Syisf7YoQgsJKPNFoqqLQlu+VQ/tVSshMR6loPMn8U+dPg==}
@@ -1474,19 +1476,19 @@ packages:
     dev: false
     optional: true
 
-  /@rstore/core@0.6.1:
-    resolution: {integrity: sha512-4zEljC115yN//uY4i4IakOuF/gCSfh+1riBPPMx41J6+vhsqehqZNENIz7bcz6lNsGiXmyW+RbmSmXMd3YSMEA==}
+  /@rstore/core@0.6.2:
+    resolution: {integrity: sha512-mQ4cVCmekkQdVa7i/Yc8GSId1AR0xxnS6n26tFJZI7ephQdeMbCkNGFbjawbXeP9Asa33P2ZWJJbQdiUz2zixA==}
     dependencies:
-      '@rstore/shared': 0.6.1
+      '@rstore/shared': 0.6.2
     dev: false
 
-  /@rstore/nuxt@0.6.1(vite@6.2.5)(vue@3.5.13):
-    resolution: {integrity: sha512-P0cEQ6I7YnMBlX/Rq70qVFfvBc6z5hYMXP8s8uN856NJaclXz5vpJnixPutrq8/vpJ8yePlwxi46BwuURrZN1g==}
+  /@rstore/nuxt@0.6.2(vite@6.2.5)(vue@3.5.13):
+    resolution: {integrity: sha512-5ej3j8vb3DcKqgrBQ6RUS3r35xZbqt4geyzuqrba4emBY6ajUFqcgH+Ua4t2hllcV0XkkS3bUyt/Jd598N/N+Q==}
     dependencies:
       '@nuxt/devtools-kit': 2.3.2(magicast@0.3.5)(vite@6.2.5)
       '@nuxt/kit': 3.16.2(magicast@0.3.5)
-      '@rstore/shared': 0.6.1
-      '@rstore/vue': 0.6.1(vue@3.5.13)
+      '@rstore/shared': 0.6.2
+      '@rstore/vue': 0.6.2(vue@3.5.13)
       sirv: 3.0.1
     transitivePeerDependencies:
       - magicast
@@ -1495,19 +1497,19 @@ packages:
       - vue
     dev: false
 
-  /@rstore/shared@0.6.1:
-    resolution: {integrity: sha512-1Szy9M1/Z3xQLjiy8g6zTyq9VxC82+PM7C+aW+5Hb6fOKwsV8Rn2rK0oZEPUkEPfrPLqVdzwPK4SGisGuKYOEA==}
+  /@rstore/shared@0.6.2:
+    resolution: {integrity: sha512-Yvsdr14SPVbMO8G9PYuOvDER/dz2vKyQ6CVU7SzqPMEKpNl9+zF0lh04gIPmJLpofNZwZCP3pwk0y5W18gnmLw==}
     dependencies:
       '@standard-schema/spec': 1.0.0
     dev: false
 
-  /@rstore/vue@0.6.1(vue@3.5.13):
-    resolution: {integrity: sha512-CWr42Q2+pfNfrOgUGa6fND0W5K38v3uDdlFwBq67yMws8sTp2NSvtCRtBW4Nwn0IfS5QxnmuCbj+9CsO+RX9sQ==}
+  /@rstore/vue@0.6.2(vue@3.5.13):
+    resolution: {integrity: sha512-3pnCeX9/z1ESrTIFe8vM5Ruw8XPEw5SjW6sMSbFNh7VT13Ub3muFl77nMecIcs0G2Qp6Zvs5G6hKSmkZ72Y+OQ==}
     peerDependencies:
       vue: ^3.2.29
     dependencies:
-      '@rstore/core': 0.6.1
-      '@rstore/shared': 0.6.1
+      '@rstore/core': 0.6.2
+      '@rstore/shared': 0.6.2
       '@vueuse/core': 12.8.2
       vue: 3.5.13
     transitivePeerDependencies:

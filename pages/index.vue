@@ -2,29 +2,24 @@
 import Vehicles from '~/components/Vehicles.vue'
 const store = useStore()
 
-// Console log => "drivers"
-// store.drivers.queryMany(),
-// store.vehicleConfigurations.queryMany(),
-// store.vehicles.queryMany()
 
-// Console log => "drivers" / "vehicleConfigurations"
-// await Promise.all([
-//  store.drivers.queryMany(),
-//  store.vehicleConfigurations.queryMany(),
-//  store.vehicles.queryMany()
-//])
+const { data: vehicles } = store.vehicles.queryMany()
+const selectedVehicleId = ref()
+const { data: configuration, refresh } = store.vehicleConfigurations.queryFirst(selectedVehicleId.value ? { params: vehicleId: selectedVehicleId.value } : { enabled : false})
 
-// Console log => "drivers"
-Promise.all([
-  store.drivers.queryMany(),
-  store.vehicleConfigurations.queryMany(),
-  store.vehicles.queryMany()
-])
-
+watch(selectedVehicleId, (id) => {
+  if (id) {
+    console.log('vehicle selected')
+    refresh()
+  }
+})
 </script>
 
 <template>
   <div>
-    <Vehicles />
+    <select v-model="selectedVehicleId">
+      <option v-for="vehicle in vehicles" :key="vehicle.id" :value="selectedVehicleId">{{ vehicle.label }}</option>
+    </select>
+    <pre>{{ configuration }}</pre>
   </div>
 </template>
